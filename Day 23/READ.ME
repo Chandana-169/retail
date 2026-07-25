@@ -1,0 +1,67 @@
+Day 23 – Kubernetes Deployment and Auto-Scaling of RetailPulse Dashboard
+
+Objective
+
+The objective of Day 23 was to deploy the RetailPulse Business Intelligence Dashboard on Kubernetes for scalable, reliable, and production-ready execution. Kubernetes was used to manage container deployment, networking, configuration, and automatic scaling of the application.
+
+Project Overview
+
+The RetailPulse Streamlit application, previously containerized using Docker, was deployed to a Kubernetes cluster. Kubernetes resources were created to automate application deployment, service exposure, configuration management, and workload scaling.
+
+Project Components
+
+The Kubernetes deployment includes the following components:
+
+- Streamlit Application (app.py)
+- Docker Container Image
+- Deployment Configuration
+- Service Configuration
+- ConfigMap
+- Namespace
+- Horizontal Pod Autoscaler (HPA)
+- Kustomization File
+- Retail Sales Datasets
+- Trained LSTM Model
+
+Kubernetes Namespace
+
+A dedicated Kubernetes namespace was created to isolate the RetailPulse application from other workloads running in the cluster. This improves resource management and application organization.
+
+Deployment Configuration
+
+A Kubernetes Deployment manifest was created to define the application deployment. The deployment manages application replicas, container images, restart policies, and rolling updates to ensure high availability.
+
+Service Configuration
+
+A Kubernetes Service was configured to expose the RetailPulse dashboard within the cluster and provide stable network access to the deployed application.
+
+ConfigMap Integration
+
+A ConfigMap was created to store application configuration values separately from the application code. This enables easier configuration updates without rebuilding the Docker image.
+
+Horizontal Pod Autoscaling
+
+A Horizontal Pod Autoscaler (HPA) was configured to automatically increase or decrease the number of application pods based on CPU utilization. This ensures efficient resource utilization during varying workloads.
+
+Application Deployment
+
+The application was deployed using Kubernetes manifests. The deployment automatically created pods, managed container execution, and ensured that the required number of application instances remained available.
+
+Deployment Management
+
+Kustomize was used to organize and manage Kubernetes resources. A kustomization.yaml file was created to simplify deployment by combining all Kubernetes manifests into a single configuration.
+
+Key Findings
+
+• Successfully deployed the RetailPulse dashboard on Kubernetes.
+• Created a dedicated namespace for application isolation.
+• Configured Deployment for automated pod management.
+• Exposed the application using a Kubernetes Service.
+• Managed application configuration using ConfigMap.
+• Enabled automatic scaling using Horizontal Pod Autoscaler (HPA).
+• Organized deployment resources using Kustomize.
+• Improved application scalability, reliability, and maintainability through Kubernetes.
+
+Conclusion
+
+Day 23 focused on deploying the RetailPulse Business Intelligence Dashboard on Kubernetes. The application was successfully deployed using Kubernetes Deployment, Service, ConfigMap, Namespace, and Horizontal Pod Autoscaler resources. The completed Kubernetes deployment provides a scalable, fault-tolerant, and production-ready environment capable of handling increasing workloads while ensuring high availability and efficient resource management.
