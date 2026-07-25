@@ -1,0 +1,44 @@
+Day 1 – Data Understanding and Exploratory Data Analysis (EDA)
+
+Objective
+
+The objective of Day 1 was to understand the retail sales dataset by combining two years of transaction data, exploring its structure, identifying missing values, performing statistical analysis, and visualizing important business insights before data preprocessing.
+
+Dataset Overview
+
+Two retail datasets (2009–2010 and 2010–2011) were imported and merged into a single dataset using the Pandas concat() function. The combined dataset contains retail transaction records from two consecutive years, providing a complete view of customer purchases.
+
+Dataset Features
+
+The dataset includes Invoice Number, Stock Code, Product Description, Quantity, Invoice Date, Price, Customer ID, Country, Customer Segment, Sales Channel, Payment Mode, Order Priority, and an additional Unnamed column.
+
+Data Understanding
+
+The dataset was explored using the head(), shape(), and info() functions to understand the number of records, feature names, data types, and overall structure. This helped in understanding the quality and organization of the data before preprocessing.
+
+Missing Value Analysis
+
+Missing values were identified using the isnull().sum() function. The analysis showed that some columns, including Customer ID, Customer Segment, Product Description, and the Unnamed column, contain missing values that need to be handled during the preprocessing stage.
+
+Statistical Analysis
+
+Descriptive statistics were generated using the describe() function. The analysis provided the mean, standard deviation, minimum, maximum, and quartile values for numerical features such as Quantity and Price. This helped identify the distribution of data and possible outliers.
+
+Data Visualization
+
+Histograms were plotted to study the distribution of numerical variables such as Quantity and Price. A country-wise transaction analysis was performed using a bar chart to identify the top countries with the highest number of retail transactions. A correlation heatmap was also generated to examine relationships between numerical features.
+
+Key Findings
+
+• Successfully merged two years of retail transaction data into a single dataset.
+• Explored the dataset structure using head(), shape(), and info().
+• Identified missing values in important columns.
+• Performed descriptive statistical analysis on numerical features.
+• Visualized the distribution of Quantity and Price using histograms.
+• Identified the top countries with the highest number of transactions.
+• Analyzed correlations among numerical variables using a heatmap.
+• Gained a clear understanding of the dataset before data preprocessing.
+
+Conclusion
+
+Day 1 focused on understanding the retail sales dataset through Exploratory Data Analysis (EDA). The dataset was successfully merged and examined for its structure, missing values, statistical properties, and business insights. Various visualizations helped identify transaction patterns, country-wise sales distribution, and relationships between numerical variables. These findings provide a strong foundation for data cleaning, preprocessing, feature engineering, and machine learning tasks in the subsequent stages of the project.

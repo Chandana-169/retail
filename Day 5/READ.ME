@@ -1,0 +1,71 @@
+Day 5 – Demand Forecasting using Prophet
+
+Objective
+
+The objective of Day 5 was to develop a demand forecasting model using the Prophet algorithm. The model predicts future product demand based on historical sales data, helping businesses improve inventory planning and demand management.
+
+Dataset Overview
+
+The cleaned retail datasets (2009–2010 and 2010–2011) were imported and merged into a single dataset. The Invoice Date column was converted into datetime format, and daily product demand was calculated by aggregating the total quantity sold for each day.
+
+Dataset Features
+
+The forecasting dataset includes the following features:
+
+- ds (Date)
+- y (Daily Quantity Sold)
+
+These features follow the standard input format required by the Prophet forecasting model.
+
+Data Preparation
+
+The Invoice Date column was converted into datetime format. Daily demand was calculated by grouping transactions by date and summing the Quantity sold. The resulting dataset was prepared for time series forecasting.
+
+Data Visualization
+
+A line graph was plotted to visualize daily product demand over time. This helped identify overall demand patterns, seasonal trends, and fluctuations in sales.
+
+Train-Test Split
+
+The daily demand dataset was divided into training and testing sets. Historical data was used to train the forecasting model, while the last 30 days of data were reserved for model evaluation.
+
+Prophet Model Training
+
+The Prophet forecasting model was initialized and trained using the training dataset. The model automatically learned trend and seasonality patterns from historical demand data.
+
+Demand Forecasting
+
+Future demand was predicted for the next 30 days using the trained Prophet model. The forecast included predicted demand values along with confidence intervals.
+
+Forecast Visualization
+
+The forecast results were visualized using Prophet's built-in plotting functions. Trend and seasonal components were also displayed to better understand demand behavior over time.
+
+Model Evaluation
+
+The forecasting performance was evaluated by comparing predicted demand with actual demand using:
+
+- Mean Absolute Error (MAE)
+- Root Mean Squared Error (RMSE)
+
+These evaluation metrics measured the accuracy of the forecasting model.
+
+Forecast Export
+
+The final forecast results were exported as a CSV file named "prophet_forecast.csv" for further business analysis and reporting.
+
+Key Findings
+
+• Successfully merged the cleaned retail datasets.
+• Prepared daily demand data for forecasting.
+• Visualized historical demand trends.
+• Split the dataset into training and testing sets.
+• Trained the Prophet forecasting model.
+• Predicted future demand for the next 30 days.
+• Visualized forecast trends and seasonal components.
+• Evaluated forecasting performance using MAE and RMSE.
+• Exported the forecast results for future analysis.
+
+Conclusion
+
+Day 5 focused on demand forecasting using the Prophet time series model. Historical sales data was transformed into daily demand, and the model successfully predicted future product demand. The forecasting results, evaluation metrics, and visualizations provide valuable insights for inventory optimization, demand planning, and business decision-making in the subsequent stages of the project.

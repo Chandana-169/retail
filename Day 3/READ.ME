@@ -1,0 +1,68 @@
+Day 3 – Customer Segmentation using Clustering Algorithms
+
+Objective
+
+The objective of Day 3 was to perform customer segmentation using RFM (Recency, Frequency, Monetary) features. Clustering techniques were applied to group customers based on their purchasing behavior, enabling better customer analysis and targeted business strategies.
+
+Dataset Overview
+
+The RFM dataset generated during the previous stage was imported for customer segmentation. The dataset contains customer-level Recency, Frequency, and Monetary values that summarize purchasing behavior.
+
+Dataset Features
+
+The dataset includes the following features:
+
+- Customer ID
+- Recency
+- Frequency
+- Monetary
+
+These features were used as input for clustering algorithms.
+
+Data Preparation
+
+The dataset was inspected for missing values and descriptive statistics. Any missing values were removed to ensure data quality before applying clustering algorithms.
+
+Feature Scaling
+
+The numerical features (Recency, Frequency, and Monetary) were standardized using the StandardScaler technique. Feature scaling ensures that all variables contribute equally during clustering.
+
+Elbow Method
+
+The Elbow Method was applied using the K-Means algorithm to determine the optimal number of customer clusters. Inertia values were calculated for different cluster sizes, and the elbow curve was plotted to identify the most suitable number of clusters.
+
+K-Means Clustering
+
+The K-Means clustering algorithm was implemented using four clusters. Each customer was assigned to a cluster based on similarities in purchasing behavior. The cluster labels were stored as a new feature named KMeans_Cluster.
+
+Cluster Analysis
+
+The average Recency, Frequency, and Monetary values were calculated for each cluster. This helped interpret customer groups such as high-value customers, regular customers, and low-value customers.
+
+Data Visualization
+
+A scatter plot was created using Frequency and Monetary values, with different colors representing K-Means clusters. The visualization clearly showed the separation between customer groups.
+
+Model Evaluation
+
+The clustering performance was evaluated using the Silhouette Score. The score measured how well customers were grouped within their respective clusters and how distinct the clusters were from one another.
+
+DBSCAN Clustering
+
+The DBSCAN clustering algorithm was also applied to compare density-based clustering with K-Means. DBSCAN identified customer groups based on data density and detected possible outliers.
+
+Key Findings
+
+• Successfully imported and analyzed the RFM dataset.
+• Removed missing values before clustering.
+• Standardized numerical features using StandardScaler.
+• Determined the optimal number of clusters using the Elbow Method.
+• Applied K-Means clustering for customer segmentation.
+• Generated four customer clusters based on purchasing behavior.
+• Visualized customer clusters using a scatter plot.
+• Evaluated clustering quality using the Silhouette Score.
+• Applied DBSCAN clustering for comparison and outlier detection.
+
+Conclusion
+
+Day 3 focused on customer segmentation using clustering techniques. The RFM features were standardized and used to group customers based on purchasing patterns. K-Means successfully identified distinct customer segments, while DBSCAN provided an alternative density-based clustering approach. These customer segments will support personalized marketing, customer retention strategies, and further predictive analytics in the next stages of the project.

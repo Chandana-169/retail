@@ -1,0 +1,63 @@
+Day 4 – Time Series Analysis and Stationarity Testing
+
+Objective
+
+The objective of Day 4 was to perform time series analysis on retail sales data by preparing daily sales records, analyzing sales trends, computing rolling statistics, and testing the stationarity of the time series before forecasting.
+
+Dataset Overview
+
+The cleaned retail dataset (Year_2010_2011_cleaned.csv) was imported. The Invoice Date column was converted into datetime format, and a new SalesAmount feature was calculated using Quantity and Price.
+
+Dataset Features
+
+The dataset includes the following features:
+
+- Invoice Number
+- Stock Code
+- Product Description
+- Quantity
+- Invoice Date
+- Price
+- Customer ID
+- Country
+- SalesAmount
+
+Data Preparation
+
+The Invoice Date column was converted into datetime format after correcting the time format. A new feature named SalesAmount was created by multiplying Quantity and Price. Daily sales were then calculated by grouping transactions based on the Invoice Date.
+
+Time Series Creation
+
+The daily sales data was sorted chronologically and converted into a daily time series. Missing dates were filled with zero sales using the asfreq() and fillna() functions to maintain continuity in the dataset.
+
+Trend Analysis
+
+A line plot was generated to visualize daily sales over time. This visualization helped identify overall sales trends, seasonal patterns, and fluctuations in customer purchasing behavior.
+
+Rolling Statistics
+
+A 7-day rolling mean and a 7-day rolling standard deviation were calculated to smooth short-term fluctuations and observe long-term sales trends. These statistics were plotted along with the original time series.
+
+Stationarity Test
+
+The Augmented Dickey-Fuller (ADF) Test was performed to determine whether the sales time series was stationary. The ADF Statistic, P-value, and Critical Values were calculated to evaluate stationarity.
+
+Differencing
+
+First-order differencing was applied to the daily sales series to remove trends and stabilize the mean. The differenced series was prepared for future forecasting models.
+
+Key Findings
+
+• Imported the cleaned retail sales dataset successfully.
+• Converted Invoice Date into datetime format.
+• Created the SalesAmount feature.
+• Generated a daily sales time series.
+• Filled missing dates with zero sales values.
+• Visualized daily sales trends using a line chart.
+• Computed 7-day rolling mean and rolling standard deviation.
+• Performed the Augmented Dickey-Fuller (ADF) stationarity test.
+• Applied first-order differencing to prepare the data for forecasting.
+
+Conclusion
+
+Day 4 focused on preparing the retail sales data for time series forecasting. The sales transactions were converted into a continuous daily time series, rolling statistics were used to analyze trends, and the Augmented Dickey-Fuller test evaluated stationarity. First-order differencing further improved the dataset, making it suitable for applying forecasting models such as ARIMA and other time series algorithms in the next stage of the project.

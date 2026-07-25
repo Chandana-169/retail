@@ -1,0 +1,64 @@
+Day 2 – Data Cleaning, Feature Engineering, and Data Validation
+
+Objective
+
+The objective of Day 2 was to clean the retail sales dataset, handle missing values and duplicate records, create new features for customer behavior analysis, generate rolling statistics for time-series analysis, and validate the dataset to ensure data quality before machine learning.
+
+Dataset Cleaning
+
+The dataset was cleaned by removing unnecessary unnamed columns, eliminating duplicate records, handling missing values, converting the Invoice Date into datetime format, and filtering invalid records such as negative quantities and prices.
+
+Missing Value Handling
+
+Missing values in the Product Description column were replaced with "Unknown". Records with missing Customer ID and invalid Invoice Date values were removed to maintain data consistency and improve analysis quality.
+
+Duplicate Removal
+
+Duplicate transaction records were identified using the duplicated() function and removed using drop_duplicates(), ensuring that each transaction appears only once in the dataset.
+
+Feature Engineering
+
+A new feature called SalesAmount was created by multiplying Quantity and Price. This feature represents the total sales value for each transaction and is useful for sales analysis and machine learning.
+
+RFM Feature Generation
+
+Customer-level RFM (Recency, Frequency, Monetary) features were generated.
+
+• Recency represents the number of days since the customer's last purchase.
+• Frequency represents the total number of unique invoices for each customer.
+• Monetary represents the total amount spent by each customer.
+
+RFM scores were calculated using quantile-based scoring and combined to generate an overall RFM Score for customer segmentation.
+
+Rolling Statistics
+
+Daily sales were calculated by grouping transactions based on Invoice Date. Seven-day rolling mean and seven-day rolling standard deviation were computed to analyze sales trends and identify short-term variations in sales performance.
+
+Data Validation
+
+Data validation checks were performed to ensure dataset quality. Validation included:
+
+• Checking that the Invoice column contains no missing values.
+• Ensuring Customer ID contains no null values.
+• Verifying that all Quantity values are non-negative.
+• Confirming that invalid records were successfully removed.
+
+Cleaned Dataset Export
+
+The cleaned datasets, RFM features, and rolling statistics were exported as CSV files for use in subsequent machine learning and business intelligence tasks.
+
+Key Findings
+
+• Removed unnecessary unnamed columns.
+• Identified and removed duplicate records.
+• Handled missing values in Description, Customer ID, and Invoice Date.
+• Removed records with negative Quantity and Price values.
+• Created the SalesAmount feature.
+• Generated customer RFM features for segmentation.
+• Calculated seven-day rolling mean and rolling standard deviation for daily sales.
+• Validated dataset quality using multiple data integrity checks.
+• Exported cleaned datasets and engineered features for future analysis.
+
+Conclusion
+
+Day 2 focused on data preprocessing, feature engineering, and validation. The dataset was cleaned by handling missing values, duplicates, and invalid records. New analytical features such as SalesAmount and RFM metrics were created to support customer segmentation and predictive modeling. Rolling statistics provided insights into sales trends, while validation checks ensured the dataset was accurate and reliable for the next stages of machine learning and business intelligence.
