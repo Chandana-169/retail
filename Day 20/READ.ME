@@ -1,0 +1,75 @@
+Day 20 – Report Generation and Data Export using Streamlit
+
+Objective
+
+The objective of Day 20 was to develop a report generation and data export module using Streamlit. The application enables users to download forecasting results, inventory optimization data, customer churn predictions, and a consolidated PDF report for business reporting and decision-making.
+
+Dataset Overview
+
+The application imported the following project datasets:
+
+- Hybrid Forecast Results
+- Inventory Optimization Results
+- Customer Churn Predictions
+
+These datasets were used to generate downloadable reports and summary documents.
+
+Dataset Features
+
+The exported datasets include information such as:
+
+- Hybrid Demand Prediction
+- Recommended Inventory
+- Customer Churn Probability
+- Business Performance Metrics
+
+These features provide comprehensive insights into retail operations.
+
+Data Preparation
+
+The required CSV files were loaded using Pandas. The datasets were validated to ensure that the necessary information was available before generating reports and downloadable files.
+
+Streamlit Report Module
+
+A dedicated report generation interface was created using Streamlit. The application provides separate sections for exporting forecast data, inventory data, customer churn data, and a consolidated PDF report.
+
+Forecast Data Export
+
+The hybrid demand forecasting results were converted into CSV format and made available for download using Streamlit's download button functionality.
+
+Inventory Data Export
+
+The inventory optimization dataset was exported as a CSV file, allowing users to download inventory recommendations for further analysis and reporting.
+
+Customer Churn Report
+
+Customer churn prediction results were exported as a CSV file containing churn probabilities and customer-level prediction information.
+
+PDF Report Generation
+
+A PDF report was generated using the ReportLab library. The report summarized important business metrics, including:
+
+- Total Forecast
+- Average Recommended Inventory
+- High-Risk Customers
+
+The generated report provides a concise overview of project outcomes.
+
+Download Functionality
+
+Interactive download buttons were implemented within the Streamlit interface, enabling users to download CSV reports and the generated PDF report directly from the dashboard.
+
+Key Findings
+
+• Successfully imported forecasting, inventory, and customer churn datasets.
+• Developed a Streamlit-based report generation module.
+• Exported hybrid forecast results as a CSV report.
+• Exported inventory optimization results as a CSV report.
+• Exported customer churn predictions as a CSV report.
+• Generated a consolidated PDF report using ReportLab.
+• Implemented interactive download buttons for all reports.
+• Simplified business reporting through automated report generation.
+
+Conclusion
+
+Day 20 focused on developing a report generation and data export module for the Retail Sales Forecasting project. The application successfully generated downloadable CSV files and a consolidated PDF report, enabling users to access forecasting results, inventory recommendations, and customer churn predictions in a convenient format. This module enhances business reporting, documentation, and decision-making by providing easy access to project outputs.

@@ -1,0 +1,64 @@
+Day 16 – What-If Demand Forecasting and Scenario Analysis
+
+Objective
+
+The objective of Day 16 was to perform What-If Demand Forecasting by developing a simple Linear Regression model to predict future product demand and analyze different business scenarios, including normal, high, and low demand conditions.
+
+Dataset Overview
+
+The cleaned retail datasets (2009–2010 and 2010–2011) were imported and merged into a single dataset. Monthly demand was calculated by aggregating the total quantity sold for each month.
+
+Dataset Features
+
+The forecasting dataset includes the following features:
+
+- Invoice Date
+- Quantity
+- Month (Numerical Index)
+
+These features were used to train the Linear Regression forecasting model.
+
+Data Preparation
+
+The Invoice Date column was converted into datetime format after correcting the date format. Monthly demand was calculated by grouping transaction records by month. A numerical Month index was then created for regression model training.
+
+Model Development
+
+A Linear Regression model was developed using the Month index as the input feature and monthly Quantity sold as the target variable. The model was trained to identify the overall trend in historical demand.
+
+Demand Forecasting
+
+The trained model generated demand predictions for the historical data. These predictions were compared with the actual monthly demand to evaluate the overall demand trend.
+
+What-If Scenario Analysis
+
+Future demand was forecast for the next six months. Three different demand scenarios were generated:
+
+- Normal Demand
+- High Demand (20% increase)
+- Low Demand (20% decrease)
+
+These scenarios help businesses understand possible future demand variations and prepare inventory accordingly.
+
+Data Visualization
+
+A line chart was created to compare Actual Demand and Forecasted Demand for historical data. Another visualization compared the Normal, High, and Low Demand scenarios for the forecast period.
+
+Forecast Export
+
+The final What-If forecasting results were exported as an Excel file named "Demand_Forecast_WhatIf.xlsx" for future analysis and business planning.
+
+Key Findings
+
+• Successfully merged the cleaned retail datasets.
+• Converted Invoice Date into datetime format.
+• Generated monthly demand data.
+• Developed a Linear Regression forecasting model.
+• Predicted future demand for the next six months.
+• Created Normal, High, and Low demand scenarios.
+• Visualized historical and future demand trends.
+• Exported the What-If demand forecasting results to an Excel file.
+
+Conclusion
+
+Day 16 focused on What-If Demand Forecasting using a Linear Regression model. Historical monthly demand was analyzed to predict future sales trends, and multiple demand scenarios were created to support business planning. The generated forecasts and scenario analysis provide valuable insights for inventory management, production planning, and strategic decision-making under different market conditions.

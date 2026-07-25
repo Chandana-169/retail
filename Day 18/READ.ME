@@ -1,0 +1,93 @@
+Day 18 – Inventory Optimization Dashboard using Dash and Plotly
+
+Objective
+
+The objective of Day 18 was to develop an interactive Inventory Optimization Dashboard using Dash and Plotly. The dashboard provides inventory recommendations, sales insights, and product analysis to help businesses optimize stock levels and improve inventory management.
+
+Dataset Overview
+
+The cleaned retail dataset (Year_2009_2010_Cleaned.csv) was imported for dashboard development. The dataset contains transaction details, product information, sales values, and inventory-related attributes.
+
+Dataset Features
+
+The dashboard utilizes the following features:
+
+- Invoice Date
+- Stock Code
+- Product Description
+- Quantity
+- SalesAmount
+- Country
+- Year
+
+These features were used to generate inventory recommendations and business insights.
+
+Data Preparation
+
+The Invoice Date column was converted into datetime format, and a new Year feature was extracted. Demand categories and inventory recommendations were generated based on the quantity sold for each product.
+
+Demand Categorization
+
+Products were categorized into three demand levels based on their sales quantity:
+
+- High Demand
+- Medium Demand
+- Low Demand
+
+This categorization helps identify products requiring different inventory strategies.
+
+Inventory Recommendations
+
+Inventory recommendations were generated using business rules based on product demand:
+
+- Restock
+- Maintain Stock
+- Reduce Stock
+
+These recommendations support efficient inventory planning and stock control.
+
+Dashboard Development
+
+An interactive dashboard was developed using Dash and Plotly. The dashboard displays inventory metrics, business KPIs, charts, and product-level information through an easy-to-use web interface.
+
+Key Performance Indicators (KPIs)
+
+The following KPIs were calculated and displayed:
+
+- Total Sales
+- Total Quantity Sold
+- Total Products
+- Average Quantity Sold
+
+These indicators provide a quick overview of business and inventory performance.
+
+Data Visualization
+
+Several interactive visualizations were created, including:
+
+- Inventory Recommendation Distribution (Donut Chart)
+- Quantity by Product Description (Bar Chart)
+- Inventory Recommendation Count (Horizontal Bar Chart)
+- Total Sales by Country (Horizontal Bar Chart)
+- Quantity Sold by Year (Scatter Plot)
+
+These charts help users analyze inventory status and sales performance.
+
+Product Summary Table
+
+A dashboard table was created displaying the top-selling products based on Quantity and SalesAmount. This enables quick identification of high-performing products for inventory planning.
+
+Key Findings
+
+• Successfully developed an interactive Inventory Optimization Dashboard using Dash and Plotly.
+• Generated demand categories based on product quantity.
+• Created inventory recommendations for stock management.
+• Calculated Total Sales, Total Quantity, Total Products, and Average Quantity KPIs.
+• Visualized inventory recommendations and product performance using interactive charts.
+• Displayed country-wise sales and yearly quantity trends.
+• Created a product summary table for inventory analysis.
+• Designed a responsive dashboard for business intelligence and inventory optimization.
+
+Conclusion
+
+Day 18 focused on developing an Inventory Optimization Dashboard that combines business KPIs, inventory recommendations, and interactive visualizations into a single web application. The dashboard provides valuable insights into product demand, stock management, and sales performance, enabling businesses to make informed inventory and operational decisions.
