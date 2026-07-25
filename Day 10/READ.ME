@@ -1,0 +1,83 @@
+Day 10 – Inventory Optimization using Hybrid Demand Forecast
+
+Objective
+
+The objective of Day 10 was to optimize inventory levels using the Hybrid Demand Forecast generated from the Prophet and LSTM models. The system calculated safety stock, recommended inventory levels, and categorized inventory status to support efficient inventory planning and stock management.
+
+Dataset Overview
+
+The hybrid forecasting results generated during the previous stage were imported. The dataset contains actual demand values, hybrid forecast predictions, and additional inventory optimization features.
+
+Dataset Features
+
+The inventory optimization dataset includes the following features:
+
+- Actual Demand
+- Hybrid Prediction
+- Safety Stock
+- Recommended Inventory
+- Inventory Status
+
+These features were used to generate inventory recommendations based on forecasted demand.
+
+Data Preparation
+
+The hybrid forecast dataset was loaded successfully. The dataset structure and feature information were verified using the head() and info() functions before performing inventory calculations.
+
+Safety Stock Calculation
+
+Safety Stock was calculated as 20% of the Hybrid Predicted Demand. This additional inventory helps reduce the risk of stock shortages caused by unexpected demand fluctuations.
+
+Recommended Inventory Calculation
+
+The Recommended Inventory was calculated by adding the Hybrid Predicted Demand and the Safety Stock. The calculated values were rounded for practical inventory planning.
+
+Inventory Status Classification
+
+Each inventory recommendation was categorized into one of the following inventory levels:
+
+- Low Stock
+- Medium Stock
+- High Stock
+
+The classification was based on predefined inventory thresholds to simplify stock monitoring.
+
+Inventory Analysis
+
+Summary statistics were generated to calculate:
+
+- Total number of forecast records.
+- Average forecast demand.
+- Average recommended inventory.
+- Count of Low, Medium, and High stock categories.
+
+These statistics provide an overview of inventory requirements.
+
+Data Visualization
+
+Several visualizations were created to analyze inventory recommendations:
+
+- Line chart comparing Forecast Demand and Recommended Inventory.
+- Bar chart showing the distribution of Inventory Status.
+- Line chart comparing Actual Demand and Forecast Demand.
+
+These visualizations help evaluate inventory planning and forecasting performance.
+
+Results Export
+
+The final inventory optimization dataset was exported as "inventory_optimization_results.csv" for future reporting and business decision-making.
+
+Key Findings
+
+• Successfully imported the hybrid forecasting results.
+• Calculated Safety Stock as 20% of forecast demand.
+• Generated Recommended Inventory values.
+• Classified inventory into Low, Medium, and High Stock categories.
+• Calculated summary statistics for inventory planning.
+• Visualized forecast demand, recommended inventory, and inventory status.
+• Compared actual demand with forecast demand.
+• Exported the inventory optimization results for future business use.
+
+Conclusion
+
+Day 10 focused on inventory optimization using the Hybrid Demand Forecast. Safety stock and recommended inventory levels were calculated to improve stock planning and reduce inventory-related risks. Inventory status classification and visualizations provided valuable insights for efficient inventory management. The exported inventory optimization dataset can be used for business reporting, warehouse management, and strategic decision-making.

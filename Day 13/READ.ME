@@ -1,0 +1,69 @@
+Day 13 – Automated Model Retraining Pipeline using XGBoost
+
+Objective
+
+The objective of Day 13 was to develop an automated model retraining pipeline that detects data drift and retrains the sales prediction model when significant changes are observed in the incoming retail data. This ensures that the machine learning model remains accurate and up-to-date.
+
+Dataset Overview
+
+Two cleaned retail datasets (2009–2010 and 2010–2011) were imported. The older dataset was used as the reference dataset, while the newer dataset was used to detect data drift and retrain the model if required.
+
+Dataset Features
+
+The datasets include the following features:
+
+- Quantity
+- Price
+- Sales
+
+The Sales feature was calculated by multiplying Quantity and Price.
+
+Data Drift Detection
+
+A simple data drift detection process was implemented by comparing the mean value of the Quantity feature between the reference dataset and the current dataset. If the difference exceeded the predefined threshold, data drift was considered to have occurred.
+
+Data Preparation
+
+The Sales feature was created using Quantity and Price. The input features (Quantity and Price) and the target variable (Sales) were prepared for model training. The dataset was then divided into training and testing sets using an 80:20 split.
+
+Automated Model Retraining
+
+When data drift was detected, the XGBoost Regressor model was automatically retrained using the latest retail sales data. This process ensured that the model learned from the updated data distribution and maintained prediction accuracy.
+
+Model Evaluation
+
+The retrained model was evaluated using:
+
+- Mean Squared Error (MSE)
+- R² Score
+
+These evaluation metrics measured the performance of the updated sales prediction model.
+
+Model Saving
+
+After successful retraining, the updated XGBoost model was saved as "Sales_Prediction_Model_Day13.pkl" using the Joblib library. This saved model can be used for future sales prediction without retraining.
+
+Pipeline Automation
+
+An automated pipeline summary was generated to display the complete workflow, including:
+
+- Dataset loading
+- Data drift detection
+- Model retraining (if required)
+- Model saving
+- Pipeline completion status
+
+Key Findings
+
+• Successfully loaded historical and current retail datasets.
+• Detected data drift by comparing Quantity distributions.
+• Created the Sales feature for model training.
+• Prepared training and testing datasets.
+• Automatically retrained the XGBoost model when drift was detected.
+• Evaluated the retrained model using MSE and R² Score.
+• Saved the updated model using Joblib.
+• Completed the automated retraining pipeline successfully.
+
+Conclusion
+
+Day 13 focused on building an automated model retraining pipeline for retail sales prediction. Data drift detection ensured that changes in incoming data were identified promptly, while automatic retraining maintained model accuracy. The updated model was evaluated, saved, and made ready for future deployment, improving the reliability and scalability of the retail forecasting system.

@@ -1,0 +1,76 @@
+Day 6 – Demand Forecasting using LSTM Deep Learning Model
+
+Objective
+
+The objective of Day 6 was to develop a deep learning-based demand forecasting model using Long Short-Term Memory (LSTM) networks. The model predicts future product demand from historical sales data, enabling more accurate inventory planning and business decision-making.
+
+Dataset Overview
+
+The cleaned retail datasets (2009–2010 and 2010–2011) were imported and merged into a single dataset. Daily demand was calculated by aggregating the total quantity sold for each date.
+
+Dataset Features
+
+The forecasting dataset includes the following features:
+
+- Date
+- Demand
+
+These features were used to train the LSTM forecasting model.
+
+Data Preparation
+
+The Invoice Date column was converted into datetime format, and daily demand was calculated by grouping sales records based on date. The demand values were normalized using the MinMaxScaler to improve model performance.
+
+Sequence Generation
+
+A sequence length of 30 days was used to prepare input data for the LSTM model. Historical demand values from the previous 30 days were used to predict the demand for the next day.
+
+Train-Test Split
+
+The prepared sequences were divided into training and testing datasets. Approximately 80% of the data was used for model training, while the remaining 20% was reserved for performance evaluation.
+
+LSTM Model Development
+
+An LSTM neural network was developed using PyTorch Lightning. The model consisted of LSTM layers followed by a fully connected output layer to predict future demand values.
+
+Model Training
+
+The model was trained for multiple epochs using the training dataset. During training, the network learned demand patterns, trends, and temporal dependencies from historical sales data.
+
+Demand Prediction
+
+After training, the model generated demand predictions for the testing dataset. The predicted values were converted back to their original scale using the inverse transformation of the MinMaxScaler.
+
+Model Evaluation
+
+The forecasting performance was evaluated using the following metrics:
+
+- Mean Absolute Error (MAE)
+- Root Mean Squared Error (RMSE)
+
+These metrics measured the prediction accuracy of the LSTM model.
+
+Data Visualization
+
+A line graph was plotted to compare the actual demand values with the predicted demand values. The visualization demonstrated how closely the LSTM model followed the real demand pattern.
+
+Model Saving
+
+The trained LSTM model was saved as "lstm_demand_model.pth" for future forecasting and deployment.
+
+Key Findings
+
+• Successfully merged the cleaned retail datasets.
+• Generated daily demand data from historical transactions.
+• Normalized demand values using MinMaxScaler.
+• Created 30-day sequential input data for LSTM training.
+• Split the dataset into training and testing sets.
+• Developed and trained an LSTM deep learning model.
+• Predicted future demand using historical sales patterns.
+• Evaluated model performance using MAE and RMSE.
+• Visualized actual versus predicted demand.
+• Saved the trained LSTM model for future use.
+
+Conclusion
+
+Day 6 focused on implementing a deep learning-based demand forecasting system using an LSTM neural network. Historical sales data was transformed into sequential time-series data, enabling the model to learn temporal patterns effectively. The trained model successfully predicted future demand and demonstrated strong forecasting capability through evaluation metrics and visualization. The saved model can be used for future demand prediction, inventory optimization, and business planning.

@@ -1,0 +1,103 @@
+Day 11 – Sales Prediction using XGBoost with Hyperparameter Optimization
+
+Objective
+
+The objective of Day 11 was to develop a machine learning model for predicting retail sales using the XGBoost Regressor. Hyperparameter optimization was performed using Optuna to improve prediction accuracy and identify the most influential features affecting sales.
+
+Dataset Overview
+
+The cleaned retail sales dataset (Year_2010_2011_Cleaned.csv) was imported for sales prediction. The dataset contains transaction details, customer information, product information, and sales-related attributes.
+
+Dataset Features
+
+The dataset includes the following features:
+
+- Quantity
+- Price
+- Invoice Date
+- Country
+- Customer Segment
+- Sales Channel
+- Payment Mode
+- Order Priority
+
+Additional features such as Year, Month, Day, and Weekday were extracted from the Invoice Date to improve model performance.
+
+Data Preparation
+
+The Invoice Date column was converted into datetime format. New time-based features including Year, Month, Day, and Weekday were extracted. A new Sales feature was created by multiplying Quantity and Price.
+
+Feature Encoding
+
+Categorical features such as Country, Customer Segment, Sales Channel, Payment Mode, Order Priority, and Weekday were converted into numerical values using the LabelEncoder technique.
+
+Feature Selection
+
+The following input features were selected for model training:
+
+- Quantity
+- Price
+- Year
+- Month
+- Day
+- Weekday
+- Country
+- Customer Segment
+- Sales Channel
+- Payment Mode
+- Order Priority
+
+The target variable used for prediction was Sales.
+
+Train-Test Split
+
+The dataset was divided into training and testing sets using an 80:20 ratio. The training data was used to build the prediction model, while the testing data was used for performance evaluation.
+
+XGBoost Model Development
+
+An XGBoost Regressor model was trained using the prepared training dataset. The model learned the relationship between input features and sales values to generate accurate predictions.
+
+Model Evaluation
+
+The prediction performance was evaluated using:
+
+- Mean Absolute Error (MAE)
+- Root Mean Squared Error (RMSE)
+
+These metrics measured the prediction accuracy of the regression model.
+
+Feature Importance Analysis
+
+Feature importance scores were generated from the trained XGBoost model. A bar chart was plotted to identify the features that contributed the most to sales prediction.
+
+Hyperparameter Optimization
+
+Optuna was used to optimize the XGBoost model by tuning important parameters such as:
+
+- Number of Estimators
+- Maximum Depth
+- Learning Rate
+- Subsample Ratio
+- Column Sample by Tree
+
+The optimized model was retrained using the best parameter combination obtained from Optuna.
+
+Performance Comparison
+
+The baseline RMSE and optimized RMSE were compared to evaluate the improvement achieved after hyperparameter optimization.
+
+Key Findings
+
+• Successfully imported and prepared the cleaned retail dataset.
+• Extracted Year, Month, Day, and Weekday features from Invoice Date.
+• Created the Sales feature for prediction.
+• Encoded categorical variables using LabelEncoder.
+• Trained an XGBoost Regressor model for sales prediction.
+• Evaluated model performance using MAE and RMSE.
+• Generated feature importance rankings.
+• Optimized the XGBoost model using Optuna.
+• Improved prediction accuracy by comparing baseline and optimized RMSE.
+
+Conclusion
+
+Day 11 focused on developing an XGBoost-based sales prediction model and improving its performance using Optuna hyperparameter optimization. Feature engineering, categorical encoding, and model tuning significantly enhanced prediction accuracy. The optimized model provides reliable sales forecasts that can support inventory planning, demand forecasting, and business decision-making.

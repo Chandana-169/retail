@@ -1,0 +1,62 @@
+Day 12 – Data Drift Detection using Evidently AI
+
+Objective
+
+The objective of Day 12 was to detect data drift between historical and current retail sales datasets using the Evidently AI framework. This analysis helps identify significant changes in data distribution that may affect the performance of machine learning models.
+
+Dataset Overview
+
+Two cleaned retail datasets (2009–2010 and 2010–2011) were imported. The 2009–2010 dataset was used as the reference dataset, while the 2010–2011 dataset was used as the current dataset for comparison.
+
+Dataset Features
+
+The datasets included features such as:
+
+- Quantity
+- Price
+- Country
+- Customer Segment
+- Sales Channel
+- Payment Mode
+- Order Priority
+- Year
+- Month
+- Day
+- Weekday
+
+These features were analyzed to detect changes in data distribution.
+
+Data Preparation
+
+Unnecessary columns such as Invoice, StockCode, Description, Customer ID, and Unnamed columns were removed. The Invoice Date column was converted into datetime format, and new features including Year, Month, Day, and Weekday were extracted. Missing values were replaced with zero, and both datasets were aligned to contain the same set of features.
+
+Categorical Data Encoding
+
+Categorical features were converted into numerical values using the LabelEncoder technique. This ensured compatibility with the Evidently AI data drift detection process.
+
+Data Drift Analysis
+
+The Evidently AI library was used to generate a Data Drift Report. The report compared the reference dataset with the current dataset to identify changes in feature distributions and detect whether significant drift had occurred.
+
+Drift Report Generation
+
+A Data Drift Report was created using the DataDriftPreset available in Evidently AI. The report analyzed all common features between the two datasets and summarized the drift detection results.
+
+Report Export
+
+The generated report was exported as an HTML file named "Data_Drift_Report.html". This report provides an interactive visualization of drift statistics and feature-level comparisons.
+
+Key Findings
+
+• Successfully imported the reference and current retail datasets.
+• Removed unnecessary columns before analysis.
+• Converted Invoice Date into datetime format and extracted time-based features.
+• Replaced missing values to ensure data consistency.
+• Encoded categorical variables using LabelEncoder.
+• Compared historical and current datasets using Evidently AI.
+• Generated a comprehensive Data Drift Report.
+• Exported the drift analysis as an HTML report for future monitoring.
+
+Conclusion
+
+Day 12 focused on monitoring data quality by detecting data drift using the Evidently AI framework. Historical and current retail datasets were compared to identify changes in feature distributions that could affect machine learning model performance. The generated Data Drift Report provides valuable insights for maintaining model reliability and deciding when model retraining may be required.
